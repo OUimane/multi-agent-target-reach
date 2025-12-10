@@ -1,0 +1,72 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/E-puckCameraRecognition.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.4026733927237734 -0.3409322984352196 -0.8494817871361365 4.43642377543862
+  position 0.06043588648377897 -1.8885039363177452 2.162207831614923
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 0.88 0.88
+  floorTileSize 0.88 0.88
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/curriculum/worlds/textures/arena_floor.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  wallHeight 0.05
+  wallAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/curriculum/worlds/textures/arena_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+E-puckCameraRecognition {
+  hidden position_0_0 -7.691086413211347
+  hidden position_0_1 7.88074837008031
+  hidden linearVelocity_0 1.5543010003660633e-05 0.0003578847944612604 1.4849795227814804e-05
+  hidden angularVelocity_0 -0.007113254889152263 0.0006377530716071563 -0.026645718182995434
+  hidden rotation_1 0 1 0 4.875284201147826
+  hidden linearVelocity_1 -1.4814352663415135e-06 -0.000296486624665494 1.4310819758591213e-06
+  hidden angularVelocity_1 0.017999739217045257 4.49995449074039e-05 -0.026644845332756722
+  hidden rotation_2 0 -1 0 4.685622244278862
+  hidden linearVelocity_2 3.88498110003118e-05 0.001083365531244758 2.6086369354180335e-05
+  hidden angularVelocity_2 -0.05733925475790892 0.0018233466548436743 -0.026647726504974073
+  translation -0.007868423957151016 0.005801113736688958 -6.586398465492811e-05
+  rotation 0.00012128710138701115 5.925459029259373e-05 -0.9999999908891661 1.5948170594409732
+  name "e-puck-0"
+  controller "beginner_robot_controller"
+}
+E-puckCameraRecognition {
+  hidden position_0_0 -4.524815342444888
+  hidden position_0_1 -4.524815339912068
+  hidden linearVelocity_0 -0.0005023940652303453 -2.069595190965742e-07 1.7053025658242406e-15
+  hidden angularVelocity_0 4.65193976996005e-11 8.692202843888804e-14 -1.3612343070319426e-11
+  hidden rotation_1 0 -0.9999999999999999 0 4.524815342444888
+  hidden linearVelocity_1 -0.0005023940648604467 -2.0695975706048923e-07 1.181182486425446e-12
+  hidden angularVelocity_1 1.0348113446714982e-05 -0.025119997632982286 -7.730817329532442e-10
+  hidden rotation_2 0 -1 0 4.524815339912068
+  hidden linearVelocity_2 -0.0005023940655986067 -2.069597465175313e-07 -1.180600045022882e-12
+  hidden angularVelocity_2 1.0348104563653617e-05 -0.02511999763301478 7.635532311366467e-10
+  translation -0.3199453637157148 0.2999362220269568 -6.390073347963682e-05
+  rotation -0.00019833606608726798 0.9617903998751491 0.2737867552874054 0.0015046202419671873
+  name "e-puck-1"
+  controller "<none>"
+}

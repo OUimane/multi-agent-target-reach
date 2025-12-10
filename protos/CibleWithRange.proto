@@ -1,0 +1,59 @@
+#VRML_SIM R2023a utf8
+PROTO CibleWithRange [
+  field SFString  name  "cibleWithrange"
+  field SFVec3f    translation  0 0 0.055
+  field SFRotation rotation     0 0 1 0
+  field SFFloat radius  0.3
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Transform {
+        children [
+          DEF base Solid {
+            translation 0 0 -0.05
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0 1 0
+                  transparency 0.6
+                  roughness 1
+                  metalness 0
+                }
+                geometry Cylinder {
+                  height 0.01
+                  radius IS radius
+                }
+              }
+            ]
+            name "solid(1)"
+          }
+          DEF cube Solid {
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0 1 0
+                  roughness 1
+                  metalness 0
+                }
+                geometry Sphere {
+					radius 0.05
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+    name IS name
+    boundingObject Sphere {
+      radius 0.06
+    }
+    recognitionColors [
+      0 1 0
+    ]
+    model "cible"
+  }
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+/home1/etudiants/licence1/l1-024/ProjetM2ILIADE/Base/Java workspace/.metadata/.plugins/org.eclipse.jdt.core
+2949097923.index
+1865797976.index
+2663827393.index
+651636851.index

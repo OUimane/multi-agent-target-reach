@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.Robot"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.DistanceSensor"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.LED"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.Motor"/>
+    <fullyQualifiedTypeName name="tes.MyController"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.Camera"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.CameraRecognitionObject"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="tes.MyController.DetectedObject"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.Emitter"/>
+    <fullyQualifiedTypeName name="com.cyberbotics.webots.controller.Receiver"/>
+    <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

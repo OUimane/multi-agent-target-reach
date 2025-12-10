@@ -1,0 +1,118 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Window.proto"
+EXTERNPROTO "../protos/CibleWithRange.proto"
+IMPORTABLE EXTERNPROTO "../protos/E-puckCameraRecognition.proto"
+
+WorldInfo {
+  randomSeed -1
+}
+Viewpoint {
+  orientation -0.35687316653543466 -0.05014550501001983 0.9328059666052002 3.402258369672822
+  position 0.9164779133054408 -0.16769958116088104 0.2738288040603989
+}
+Background {
+  skyColor [
+    0.4 0.7 1
+  ]
+}
+RectangleArena {
+  rotation 0 1 0 0
+  floorSize 6 3
+}
+DEF WALL_1 Solid {
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    Transform {
+      children [
+        Wall {
+          translation -1.5 2.5 0
+          name "wall(3)"
+        }
+        Wall {
+          translation -1.5 1.5 0
+          rotation 0 1 0 0
+          name "wall(2)"
+        }
+        Window {
+          translation -1.5 0.5 0
+          name "window(1)"
+          size 0.2 1 2.4
+        }
+        Window {
+          translation -1.5 -0.5 0
+          size 0.2 1 2.4
+        }
+        Wall {
+          translation -1.5 -1.5 0
+          name "wall(1)"
+        }
+        Wall {
+          translation -1.5 -2.5 0
+        }
+      ]
+    }
+  ]
+  name "wall_1"
+}
+DEF WALL_2 Solid {
+  translation -3 1 0
+  rotation 0 0 1 3.14159
+  children [
+    Transform {
+      children [
+        Door {
+          hidden translation_5 0.0010000013526198226 4.242955431443818e-10 0
+          translation 0 2 0
+          rotation 0 1 0 0
+          position -5.695241107552461e-10
+        }
+        Wall {
+          translation 0 1 0
+          name "wall(1)"
+        }
+        Wall {
+          rotation 0 1 0 0
+        }
+      ]
+    }
+  ]
+  name "wall_2"
+}
+Robot {
+  children [
+    Emitter {
+      channel 1
+    }
+  ]
+  name "Superviseur"
+  controller "Supervisor"
+  supervisor TRUE
+}
+DEF Wood0 WoodenBox {
+  translation -2.26754 0.62854 0.3
+  rotation 0 0 -1 0.379609
+}
+DEF Wood1 WoodenBox {
+  translation 1.86986 -0.912467 0.2
+  rotation 1 0 0 4.692820414042842e-06
+  name "wooden box(1)"
+  size 0.4 0.4 0.4
+}
+DEF Wood2 WoodenBox {
+  translation 1.0138 0.37748 0.2
+  rotation 0 0 1 0.490874
+  name "wooden box(2)"
+  size 0.4 0.6 0.4
+}
+DEF Wood3 WoodenBox {
+  translation -1.80452 -1.1996 0.3
+  name "wooden box(3)"
+}
+DEF target CibleWithRange {
+  translation -0.24 -0.84 0.055
+}

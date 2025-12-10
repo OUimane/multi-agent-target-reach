@@ -1,0 +1,55 @@
+#VRML_SIM R2023a utf8
+PROTO Cible [
+  field SFString  name  "cible"
+  field SFVec3f    translation  0 0 0
+  field SFRotation rotation     0 0 1 0
+  field SFVec3f size  0.1 0.1 0.1
+  field SFString  controller  "void"
+  field MFString  controllerArgs  []
+  field SFInt32            emitter_channel              1
+  field SFInt32            receiver_channel             1
+]
+{
+  Robot {
+  translation IS translation
+  rotation IS rotation
+  children [
+    DEF BODY Transform {
+      children [
+        Solid {
+          children [
+            DEF CIBLE_RECEIVER Receiver {
+              channel IS receiver_channel
+            }
+            DEF CIBLE_EMITTER Emitter {
+              range 0.3
+              maxRange 2.0
+              channel IS emitter_channel
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.333333 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size IS size
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  recognitionColors [
+    0 1 0
+  ]
+  model "cible"
+  name IS name
+  boundingObject Box {
+    size IS size
+  }
+  controller IS controller
+  controllerArgs IS controllerArgs
+}
+}
